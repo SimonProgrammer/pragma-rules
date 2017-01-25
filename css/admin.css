@@ -46,10 +46,84 @@ div#tab-content > .tab-pane.active{
     to   { opacity: 1; }
 }
 /* Inicio Paneles */
-#agregar_usuario > h4{
+#agregar_usuario > h3{
 	width: 100%;
+	margin-left: 3%;
 	font-family: Montserrat, sans-serif;
-	padding-left: 3%;
 }
-
+.input_admin.derecha{
+	float: right;
+}
+.input_admin > label{
+	width: 24%;
+	font-size: 95%;
+	text-align: justify;
+	font-family: Montserrat, sans-serif;
+}
+.input_admin > div{
+	width: 70%;
+}
+.input_admin > div > input[type="text"]{
+	width: 100%;
+	margin: none;
+}
+.input_admin > label,.input_admin > div{
+	display: inline-block;
+}
+@media (min-width: 200px) and (max-width: 700px){
+	.input_admin{
+		width: 94%;
+		display: block;
+		margin-top: 2%;
+		margin-left: 3%;
+	}
+	.input_admin > label{
+		font-size: 95%;
+	}
+	.input_admin > label,.input_admin > div{
+		margin-top: 1%;
+		display: block;
+		width: 94%;
+	}
+}
+@media (min-width: 701px) and (max-width: 1024px){
+	.input_admin{
+		width: 46%;
+		display: inline-block;
+		margin-top: 2%;
+		margin-left: 3%;
+	}
+	.input_admin > label,.input_admin > div{
+		display: inline-block;
+	}
+	.input_admin > label{
+		margin-top: 1%;
+		width: 25%;
+		font-size: 90%;
+	}
+	.input_admin > div{
+		margin-top: 1%;
+		width: 60%;
+	}
+}
+@media (min-width: 1025px) and (max-width: 3000px){
+	.input_admin{
+		width: 30%;
+		display: inline-block;
+		margin-top: 2%;
+		margin-left: 3%;
+	}
+	.input_admin > label,.input_admin > div{
+		display: inline-block;
+	}
+	.input_admin > label{
+		margin-top: 1%;
+		width: 28%;
+		font-size: 95%;
+	}
+	.input_admin > div{
+		margin-top: 1%;
+		width: 50%;
+	}
+}
 /* Fin Paneles */

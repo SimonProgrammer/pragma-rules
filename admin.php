@@ -34,14 +34,13 @@
 	    <li><a>Empleados</a>
 	       <ul>
 			    <li class="tab-option" data-href = "#agregar_usuario"><a>Agregar Empleado</a></li>
-			    <li class="tab-option" data-href = "#tabs-2"><a>Listar Empleados</a></li>
 		   </ul>
 	    </li>
 	    <li><a>Comics</a>
 	       <ul>
 			    <li class="tab-option" data-href = "#tabs-3"><a>Agregar Comic</a></li>
 			    <li class="tab-option"><a>Buscar Comic</a></li>
-			    <li class="tab-option"><a>Listar Comic</a></li>
+			    <li class="tab-option" data-href = "listar_comics"><a>Listar Comic</a></li>
 		   </ul>
 	    </li>
 	    <li id = "perfil_menu" ><a><?=$_SESSION["Nombre_Usuario"]?></a>
@@ -53,36 +52,54 @@
 	</div>
   <div id = "tab-content">
   	  <div id="agregar_usuario" class="tab-pane active">
-	     <h4>Agregar Usuario</h4>
-	     <form>
+	     <h3>Agregar Empleado</h4>
+	     <form id = "form_agr_usuario">
 	     	<div class = "input_admin">
 	     		<label>Nombre Completo</label>
 	     		<div >
-	     			<input type="text" class="agr_usuario input-form" name="" placeholder="Nombre Completo" value = ""/>
+	     			<input type="text" class="agr_usuario input-form" name="nombre" placeholder="Nombre Completo" value = ""/>
 	     		</div>
 	     	</div>
 	     	<div class = "input_admin">
 	     		<label>Documento</label>
 	     		<div >
-	     			<input type="text" class="agr_usuario input-form" name="" placeholder="Nombre Completo" value = ""/>
+	     			<input type="text" class="agr_usuario input-form solo_numeros" name="documento" placeholder="Documento" value = ""/>
 	     		</div>
 	     	</div>
 	     	<div class = "input_admin">
 	     		<label>Telefono</label>
 	     		<div >
-	     			<input type="text" class="agr_usuario input-form" name="" placeholder="Telefono" value = ""/>
+	     			<input type="text" class="agr_usuario input-form" name="telefono" placeholder="Telefono" value = ""/>
 	     		</div>
 	     	</div>
 	     	<div class = "input_admin">
 	     		<label>Direccion</label>
 	     		<div >
-	     			<input type="text" class="agr_usuario input-form" name="" placeholder="Telefono" value = ""/>
+	     			<input type="text" class="agr_usuario input-form" name="direccion" placeholder="Direccion" value = ""/>
+	     		</div>
+	     	</div>
+	     	<div class = "input_admin">
+	     		<label>Usuario</label>
+	     		<div>
+	     			<input type="text" class="agr_usuario input-form email" name="correo" placeholder="Correo Electronico" value = ""/>
+	     		</div>
+	     	</div>
+	     	<div class = "input_admin">
+	     		<label>Password</label>
+	     		<div>
+	     			<input type="text" class="agr_usuario input-form password" name="password" placeholder="Password" value = ""/>
+	     		</div>
+	     	</div>
+	     	<div class = "input_admin derecha">
+	     	    <label>          </label>
+	     		<div>
+	     			<input type="button" id = "save_usuario" class="agr_usuario button_success" name="" value="Guardar Usuario"/>
 	     		</div>
 	     	</div>
 	     </form>
 	  </div>
-	  <div id="tabs-2" class="tab-pane">
-	    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+	  <div id="listar_comics" class="tab-pane">
+	    
 	  </div>
 	  <div id="tabs-3" class="tab-pane">
 	    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>

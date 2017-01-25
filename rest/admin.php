@@ -12,8 +12,8 @@
 	if(Session::validacion()){
 		$admin = new Admin();
 		switch ($_POST["accion"]) {
-			case 'agrnoticia':
-				echo $admin->AgrNoticia();
+			case 'agr_usuario':
+				echo $admin->AgrUsuario();
 				break;
 			default:
 				echo "Error";
