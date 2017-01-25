@@ -1,6 +1,6 @@
 <?php
 
-class Login extends Conexion
+class Admin extends Conexion
 {
 	public function __construct()
 	{
@@ -26,10 +26,7 @@ class Login extends Conexion
 			return 0;
 		}
 	}
-	public function cerrarSesion(){
-		Session::destruirSesion();
-		return 1;
-	}
+	
 
 }  
 ?>

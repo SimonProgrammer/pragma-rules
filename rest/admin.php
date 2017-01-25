@@ -4,25 +4,26 @@
 	  echo "Error";
 	  exit;
 	}
-    // echo "<pre>".print_r(scandir("../../"), 1)."</pre>";
-    require_once('../app/inicio/inicio.php');
-    require_once('../app/modelos/Login.php');
 
-	if(isset($_POST["accion"])){
-		$login = new Login();
+    require_once('../app/inicio/inicio.php');
+    require_once('../app/modelos/Admin.php');
+
+
+	if(Session::validacion()){
+		$admin = new Admin();
 		switch ($_POST["accion"]) {
-			case 'login':
-				echo $login->iniciarSesion();
-				break;
-			case 'cerrar_sesion':
-				echo $login->cerrarSesion();
+			case 'agrnoticia':
+				echo $admin->AgrNoticia();
 				break;
 			default:
 				echo "Error";
  				break;
-		}
+		}	
 	}
 	else if(isset($_GET)){
+		echo "Error";
+	}
+	else{
 		echo "Error";
 	}  
 ?>

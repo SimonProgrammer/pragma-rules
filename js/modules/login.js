@@ -41,12 +41,18 @@ var Login = function(ruta){
 			  url: ruta,
 			  data: { user: usuario, pass: password, accion : 'login' },
 			  success: function(result){
-			  	// console.log(result);
+			  	if(result == 1){
+			  		window.location.href = "admin.php";
+			  	}
+			  	else{
+			  		alertify.set({delay: 2000});
+					alertify.error("Usuario o Password Erroneo");
+			  	}
 			  }
 			});
 		}
 		else{
-			alertify.set({delay: 1000});
+			alertify.set({delay: 3000});
 			alertify.error("Complete los campos");
 		}
 	}
@@ -56,5 +62,10 @@ $(function(){
 	login.iniciarFondo();
 	$("body").on('click',"#loguear_usu",function(){
 		login.loguear();
+	});
+	$("body").on('keypress',".login_input",function(e){
+		if(e.which == 13) {
+       	   login.loguear();
+    	}
 	});
 });
