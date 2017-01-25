@@ -17,33 +17,10 @@
 	<script type="text/javascript" src = "https://code.jquery.com/jquery-3.1.1.min.js" ></script>
 	<script type="text/javascript" src = "js/alertify/alertify.min.js"></script>
 	<script type="text/javascript" src = "js/trianglify/trianglify.min.js"></script>
-	<script type="text/javascript" src = "js/modules/login.js"></script>
+	<script type="text/javascript" src = "js/modules/admin.js"></script>
 	<title>Login</title>
 </head>
 <body>
-	<div id="login_content">
-	    <div id="form-login">
-	    	<div id = "logo">
-	    		<img src="images/logos/logo.png">
-	   		</div>
-	   		<div id="campos_login">
-	   			<div class="input-login">
-	   				<input type="text" class="input-form login_input" id = "usuario" name="" placeholder="Usuario"/>
-	   			</div>
-	   			<div class="input-login">
-	   				<input type="password" class="input-form login_input" id = "password" name="" placeholder="Password"/>
-	   			</div>
-	   			<div class="input-buttons">
-		   			<div class="input-success">
-		   				<input type="button" class="button_success" id = "loguear_usu" name="" value="Aceptar"/>
-		   			</div>
-		   			<hr class="linea">
-	   				<div class="input-remmember">
-		   				<input type="button" class="button_warning" name="" value="¿ Olvidaste tu Password ?"/>
-		   			</div>
-	   			</div>
-	   		</div>
-	    </div>
-	</div>
+	
 </body>
 </html>

@@ -1,10 +1,11 @@
-var Login = function(){
+var Login = function(ruta){
 	this.iniciarFondo = function(){
 		var pattern = Trianglify({
 	    height: screen.height,
 	    width: screen.width,
 	    cell_size: 30 + Math.random() * 100});
 	  	document.body.appendChild(pattern.canvas());
+	  	$("canvas").fadeTo("slow",1);
 	}
 	this.validarCampos = function(clase){
 		var respuesta = false;
@@ -33,11 +34,24 @@ var Login = function(){
 	}
 	this.loguear = function(){
 		if(!this.validarCampos('.login_input')){
-			console.log("no vacios");
+			var usuario = $("#usuario").val();
+			var password = $("#password").val();
+			$.ajax({
+			  method: "POST",
+			  url: ruta,
+			  data: { user: usuario, pass: password, accion : 'login' },
+			  success: function(result){
+			  	// console.log(result);
+			  }
+			});
+		}
+		else{
+			alertify.set({delay: 1000});
+			alertify.error("Complete los campos");
 		}
 	}
 }
-var login = new Login();
+var login = new Login('rest/login.php');
 $(function(){
 	login.iniciarFondo();
 	$("body").on('click',"#loguear_usu",function(){
