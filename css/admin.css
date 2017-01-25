@@ -46,7 +46,7 @@ div#tab-content > .tab-pane.active{
     to   { opacity: 1; }
 }
 /* Inicio Paneles */
-#agregar_usuario > h3{
+h3{
 	width: 100%;
 	margin-left: 3%;
 	font-family: Montserrat, sans-serif;
@@ -85,6 +85,10 @@ div#tab-content > .tab-pane.active{
 		display: block;
 		width: 94%;
 	}
+	.comic {
+		width: 41% !important;
+		display: inline-block;
+	}
 }
 @media (min-width: 701px) and (max-width: 1024px){
 	.input_admin{
@@ -104,6 +108,10 @@ div#tab-content > .tab-pane.active{
 	.input_admin > div{
 		margin-top: 1%;
 		width: 60%;
+	}
+	.comic {
+		width: 24% !important;
+		display: inline-block;
 	}
 }
 @media (min-width: 1025px) and (max-width: 3000px){
@@ -125,5 +133,54 @@ div#tab-content > .tab-pane.active{
 		margin-top: 1%;
 		width: 50%;
 	}
+	.comic {
+		width: 23% !important;
+		display: inline-block;
+	}
 }
+#listar_comics > #busqueda_comic{
+	width: 100%;
+	margin: 2% auto;
+}
+#listar_comics > #busqueda_comic > #input_comic{
+	width: 64%;
+}
+#listar_comics > #busqueda_comic > #button_search_comic{
+	width: 30%;
+}
+#listar_comics > #busqueda_comic > #input_comic,#listar_comics > #busqueda_comic > #button_search_comic{
+	display: inline-block;
+}
+#listar_comics > #contenedor_comics{
+	width: 100%;
+	overflow-y: scroll;
+}
+/* Contenedor Comic */
+.comic {
+	margin: 1% 3%;
+	background-color: #ababff;
+	border-radius: 1rem;
+	border :2px solid #8A8AFB;
+	padding: 1% 1%;
+}
+.comic > img{
+	width: 100%;
+}
+.comic > .title{
+	width: 100%;
+	margin: 2% auto;
+}
+.comic > .title >label{
+	width: 100%;
+	font-family: Montserrat, sans-serif;
+}
+.comic > .opciones{
+	width: 100%;
+}
+.comic > .opciones > input{
+	width: 23%;
+	margin-left: 5%;
+	display: inline-block;
+}
+/* Fin Contenedor Comic*/
 /* Fin Paneles */

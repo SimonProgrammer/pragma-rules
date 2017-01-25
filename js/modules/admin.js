@@ -113,9 +113,26 @@ var Admin = function(ruta){
 		}
 	}
 	this.visualizarComics = function(){
+		var html = '';
 		$.each(admin.datos,function(key,value){
-			
+			html += '<div class = "comic">';
+			html += '<img src = "images/logos/comic_logo.jpg"/>';
+			html += '<div class = "title"><label>'+value.title+'</label></div>';
+			html += '<div class = "opciones">';
+			html += '<input type = "button" data-key = "'+key+'" class = "button_success view_comic" value = "View" />';
+			html += '<input type = "button" class = "button_warning edit_comic" value = "Edit"/>';
+			html += '</div>';
+			html += '</div>';
 		});
+		$("#contenedor_comics").html(html);
+	}
+	this.buscarComics = function(){
+		var texto = $("#coincidencia_comic").val().trim();
+		$('.comic > .title > label:not(:contains("'+texto+'"))').parents('.comic') .css('display','none');
+	}
+	this.verComic = function(){
+		var comic = admin.datos[$(this).data('key')];
+		
 	}
 
 }
@@ -138,7 +155,20 @@ $(function(){
 		var chr = String.fromCharCode(e.which);
 	    if ("1234567890".indexOf(chr) < 0)
 	        return false;
-		});
+	});
+	$("body").on('click',"#listado_comics",function(e){
+		admin.visualizarComics();
+	});
+	$("body").on('click',"#search_comic",function(e){
+		admin.buscarComics();
+	});
+	$("body").on('click',".view_comic",admin.verComic);
+	$("body").on('keyup',"#coincidencia_comic",function(){
+		console.log("prueba");
+		if($(this).val().trim() == '' ){
+			$('.comic').css('display','inline-block');
+		}
+	});
 	$("#navbar").on('click',".tab-option",function(){
 		var id = $(this).data('href');
 		$(id).addClass('active').siblings().removeClass('active');

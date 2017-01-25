@@ -39,8 +39,7 @@
 	    <li><a>Comics</a>
 	       <ul>
 			    <li class="tab-option" data-href = "#tabs-3"><a>Agregar Comic</a></li>
-			    <li class="tab-option"><a>Buscar Comic</a></li>
-			    <li class="tab-option" data-href = "listar_comics"><a>Listar Comic</a></li>
+			    <li id = "listado_comics" class="tab-option" data-href = "#listar_comics"><a>Listar Comic</a></li>
 		   </ul>
 	    </li>
 	    <li id = "perfil_menu" ><a><?=$_SESSION["Nombre_Usuario"]?></a>
@@ -52,7 +51,7 @@
 	</div>
   <div id = "tab-content">
   	  <div id="agregar_usuario" class="tab-pane active">
-	     <h3>Agregar Empleado</h4>
+	     <h3>Agregar Empleado</h3>
 	     <form id = "form_agr_usuario">
 	     	<div class = "input_admin">
 	     		<label>Nombre Completo</label>
@@ -99,11 +98,21 @@
 	     </form>
 	  </div>
 	  <div id="listar_comics" class="tab-pane">
-	    
+	      <h3>Buscar Comics</h3>
+	  	  <div id="busqueda_comic">
+	  	  	  <div id = "input_comic">
+	      		 <input type="text" id = "coincidencia_comic" class="input-form" placeholder="Digite el texto" value = ""/>
+		      </div>
+		      <div id = "button_search_comic">
+		      	<input type="button" id = "search_comic" class="button_success" name="" value="Buscar"/>
+		      </div>
+	  	  </div>
+	  	  <div id="contenedor_comics">
+	  	  	
+	  	  </div>
 	  </div>
-	  <div id="tabs-3" class="tab-pane">
-	    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-	    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+	  <div id="ver_comic" class="tab-pane">
+	    
 	  </div>
   </div>	
   
